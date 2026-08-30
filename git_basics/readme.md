@@ -15,3 +15,6 @@ my new file fixed
 
 accept my changes
 >>>>>>> newbugfixed
+
+ще не вмерла України
+ні слава ні воля
