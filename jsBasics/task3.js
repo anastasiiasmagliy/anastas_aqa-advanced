@@ -2,8 +2,8 @@
 // Після чого створіть булеву змінну яка буде визначати чи особа повнолітня базуючись на заченні з попередньої змінної.
 // Виведіть усі змінні в консоль
 
-let age.Anastasiia = 27;
-let isAdult = age.Anastasiia > 18;
+let ageAnastasiia = 27;
+let isAdult = ageAnastasiia > 18;
 
 let msg = "Чи Анастасія повнолітня?";
 
