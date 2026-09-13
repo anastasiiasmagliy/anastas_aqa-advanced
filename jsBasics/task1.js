@@ -2,7 +2,7 @@
 // Присвойте їм значення та виведіть кожну змінну на консоль.
 
 let hername = "Anastasiia";
-let age = "27";
+let age = 27;
 let issheagirl = true;
 let car = null;
 let job; 
