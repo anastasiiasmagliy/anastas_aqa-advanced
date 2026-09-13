@@ -7,4 +7,6 @@ let isAdult = ageAnastasiia > 18;
 
 let msg = "Чи Анастасія повнолітня?";
 
-console.log(msg, isAdult);
+console.log(msg);
+if (isAdult = true)
+{ console.log ("Так")}
