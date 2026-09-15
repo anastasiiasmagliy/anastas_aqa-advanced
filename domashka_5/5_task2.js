@@ -1,6 +1,6 @@
 // Виконайте попереднє завдання але використовуючи конструкцію switch/case
 
-let averageGrade = 81;
+let averageGrade = 881;
 
 switch (true) {
 
