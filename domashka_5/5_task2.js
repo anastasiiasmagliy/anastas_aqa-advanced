@@ -20,4 +20,7 @@ case averageGrade >= 81 && averageGrade <=90:
 break;
 case averageGrade >= 91 && averageGrade <=100:
 console.log ("Відмінно");   
+break;
+case averageGrade >100:
+console.log ("У нас вчиться геній!");   
 }
