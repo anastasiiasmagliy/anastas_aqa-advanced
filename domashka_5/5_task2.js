@@ -3,7 +3,11 @@
 let averageGrade = 81;
 
 switch (true) {
-case averageGrade < 60:
+
+case averageGrade < 0:
+    console.log ("Та не може такого бути");
+break;
+case averageGrade >= 0 && averageGrade < 60:
     console.log ("Незадовільно");
 break;
 case averageGrade >= 60 && averageGrade <=70:
