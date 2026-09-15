@@ -8,7 +8,7 @@
 // Якщо середня оцінка від 81 до 90 (включно), вивести "Дуже добре".
 // Якщо середня оцінка від 91 до 100 (включно), вивести "Відмінно".
 
-let averageGrade = -8;
+let averageGrade = 888;
 if (averageGrade < 0) {
 console.log ("Та не може такого бути");
 }
@@ -26,4 +26,7 @@ console.log ("Дуже добре");
 }
 else if (averageGrade >= 91 && averageGrade <=100) {
 console.log ("Відмінно");
+}
+else if (averageGrade >100) {
+console.log ("У нас вчиться геній!");
 }
