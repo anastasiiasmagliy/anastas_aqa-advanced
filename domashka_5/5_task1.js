@@ -9,7 +9,10 @@
 // Якщо середня оцінка від 91 до 100 (включно), вивести "Відмінно".
 
 let averageGrade = 81;
-if (averageGrade < 60) {
+if (averageGrade < 0) {
+console.log ("Та не може такого бути");
+}
+else if (averageGrade >= 0 && averageGrade < 60) {
 console.log ("Незадовільно");
 }
 else if (averageGrade >= 60 && averageGrade <=70) {
