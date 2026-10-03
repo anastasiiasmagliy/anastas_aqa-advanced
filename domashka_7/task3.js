@@ -6,17 +6,34 @@
 // Огорніть кожен окремий виклик функції divide в try…catch.Використовуючи блок finally, виведіть повідомлення "Робота завершена" в консоль, 
 // навіть якщо помилка виникла або не виникла.
 
-
 function divide (numerator, denominator) {
     if (denominator === 0 || isNaN(numerator) || isNaN(denominator)) {
     return 'must be a mistake';}
     else {
         return numerator / denominator};
 }
-    try {
-    console.log (divide (2, b));}
-catch (mistake) {
-    console.log ('must be a mistake');}
-finally 
-{console.log (`робота завершена`);}
+    
 
+try {
+    console.log(divide(10, 2));
+} catch (mistake) {
+    console.log(mistake.message);
+} finally {
+    console.log('робота завершена');
+}
+
+try {
+    console.log(divide(10, 0));
+} catch (mistake) {
+    console.log(mistake.message);
+} finally {
+    console.log('робота завершена');
+}
+
+try {
+    console.log(divide('hello', 2));
+} catch (mistake) {
+    console.log(mistake.message);
+} finally {
+    console.log('робота завершена');
+}
