@@ -7,3 +7,9 @@
 Створіть два масиви, наприклад, firstArray і secondArray, які містять деякі значення.
 Створіть новий масив, який містить всі елементи з обох вихідних масивів.
 Виведіть отриманий об'єднаний масив на консоль. */
+
+const firstArray = [1, 2, 3, 4, 5];
+const secondArray = [11, 12, 13, 14, 15];
+const newArray = [...firstArray, ...secondArray];
+
+console.log(...newArray);

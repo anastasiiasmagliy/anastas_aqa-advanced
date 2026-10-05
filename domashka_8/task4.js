@@ -7,3 +7,13 @@
 Створіть масив чисел, наприклад, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].
 Cтворіть новий масив, який міститиме лише парні числа.
 Виведіть отриманий масив парних чисел на консоль. */
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function checkNumber(number) {
+    return number % 2 === 0;
+}
+
+const evenNumbers = numbers.filter(checkNumber);
+
+console.log(...evenNumbers);

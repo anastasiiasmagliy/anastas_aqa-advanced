@@ -8,3 +8,9 @@ Copy code
 Відсортуйте створений масив (від меншого до більшого)
 Виведіть обидва масиви в консоль */
 
+const numbersList = [1,10,14,2,4,5,43,34];
+const numbersListCopy = [...numbersList].sort((a, b) => b - a);
+
+console.log (...numbersList);
+console.log (...numbersListCopy);
+

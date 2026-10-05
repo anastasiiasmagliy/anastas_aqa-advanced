@@ -7,3 +7,14 @@
 Створіть масив чисел, наприклад, [10, 20, 30, 40, 50].
 Використовуючи метод reduce, обчисліть суму всіх елементів масиву.
 Виведіть отриману суму на консоль. */
+
+const myMess = [10, 20, 30, 40, 50];
+
+function sumMess1 (a, b) {
+
+    return a + b;
+}
+
+const sumMess = myMess.reduce (sumMess1);
+console.log(sumMess);
+

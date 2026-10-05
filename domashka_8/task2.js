@@ -7,3 +7,15 @@
 Створіть початковий масив, наприклад, [1, 2, 3, 4, 5].
 Створіть новий масив, де кожне значення це елемент вихідного масиву помножений на значення індексу відповідного елемента початкового масиву.
 Виведіть новий масив на консоль. */
+
+const numbers = [1, 2, 3, 4, 5];
+
+function checkDouble (num, index) {
+
+    return num * index;
+}
+
+const double = numbers.map(checkDouble);
+
+console.log(...numbers); 
+console.log(...double);
