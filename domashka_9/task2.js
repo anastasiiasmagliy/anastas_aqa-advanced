@@ -6,3 +6,15 @@ year: рядок, представляє ім'я власника автомоб
 Деструктуризуйте назву та автора книги з об'єкта book.
 Виведіть деструктуризовані змінні в консоль
 */
+
+const book = {
+
+title: "1984", 
+author: "Orwell",
+year: 2015,
+
+};
+
+const {title, author, year} = book;
+
+console.log (title, author);

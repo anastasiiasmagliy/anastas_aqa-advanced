@@ -7,3 +7,15 @@ age: число, представляє вік особи.
 Видаліть властивість age з об'єкта person.
 Виведіть оновлений об'єкт person в консоль.
 */ 
+
+const person = {
+    firstName: "Anastasiia",
+    lastName: "Smagliy",
+    age: 27
+};
+
+person.email = "aaa@gmail.com";
+
+delete person.age;
+
+console.log(...Object.values(person));
