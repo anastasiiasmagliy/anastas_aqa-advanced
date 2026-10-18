@@ -33,7 +33,6 @@ book2.printInfo();
 console.log('--- Електронна книга ---');
 ebook1.printInfo();
 
-// Перевіряємо геттери й сеттери
 book1.title = 'Кобзар — нове видання';
 console.log('Нова назва:', book1.title);
 
