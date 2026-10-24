@@ -42,6 +42,20 @@ class Book {
     
 }
 
+static getLibraryName() {return 'Моя бібліотека'};
+
+static findOldestBook(books) {
+    let oldest = books[0];
+
+    for (const book of books) {
+        if (book.year < oldest.year) {
+            oldest = book;
+        }
+    }
+
+    return oldest;
+}
+
 getBookAge(currentYear) { return currentYear - this.year}
 getInfo() { return `${this.title} — ${this.author} (${this.year})` + (",") + (" ") + ('вік книги:') + (" ") + this.getBookAge(2026)};
 
@@ -79,21 +93,22 @@ else {this.title = newTitle; return 'Назву оновлено';}
 
 /*
 
-Тепер додай сеттер setFormat, який:
-1. Приймає новий формат newFormat.
-2. Дозволяє лише 'pdf', 'epub' або 'mobi'.
-3. Якщо формат правильний — оновлює this.format.
-4. Якщо неправильний — залишає старий формат.
+3. Твоє перше завдання зі static
+Почнемо з простішого, щоб зрозуміти синтаксис.
+
+Додай до свого класу Book статичний метод getLibraryName().
+
+Він повинен повертати рядок:
+
+'Моя бібліотека'
+
+Після цього виклич його так:
+console.log(Book.getLibraryName());
+
 Очікуваний результат:
-ebook1.setFormat = 'epub';
-console.log(ebook1.getFormat); // epub
+Моя бібліотека
 
-ebook1.setFormat = 'txt';
-console.log(ebook1.getFormat); // epub
-
-Підказка: сеттер починається з set, а для перевірки кількох варіантів можна використати ||.
-
-Спробуй написати тільки сеттер самостійно. 💗
+Підказка: тобі знадобляться лише static, назва методу та return.
 
 */
 
@@ -120,8 +135,9 @@ const book4 = new Book('Книга майбутнього', 'Анна', 2005);
 
 const ebook1 = new Ebook ('Кобзар', 'Тарас Шевченко', 1840, 'pdf');
 
-ebook1.setFormat = 'epub';
-console.log(ebook1.getFormat); // epub
 
-ebook1.setFormat = 'txt';
-console.log(ebook1.getFormat); // epub
+const books = [book1, book2, book3, book4];
+
+console.log(Book.findOldestBook(books));
+
+*
