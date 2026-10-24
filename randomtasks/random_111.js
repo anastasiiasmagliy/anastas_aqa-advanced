@@ -1,18 +1,5 @@
 /* 
 
-.
-🟠 Завдання 3. Пошук найдорожчого товару
-Є масив:
-const prices = [150, 320, 90, 780, 450];
-
-Знайди найбільше число за допомогою for...of.
-
-Очікуваний результат:
-780
-
-Підказка: можеш використати підхід, який ми розбирали з найстарішою книжкою:
-let maxPrice = prices[0];
-
 🔵 Завдання 4. Фільтрація тест-кейсів
 А тепер щось ближче до твоєї роботи QA.
 
@@ -57,6 +44,30 @@ testCase.name
 Як працюємо далі: надсилай розв'язок першого завдання, я перевірю. Потім друге, третє і так до п'ятого.
 */
 
+const testResults = [
+    'passed',
+    'failed',
+    'passed',
+    'blocked',
+    'failed',
+    'passed'
+];
+
+function checkResults(testResults) {
+    let amountFailed = 0;
+
+    for (const num of testResults) {
+        if (num === 'failed') {
+            amountFailed++;
+        }
+    }
+
+    return amountFailed;
+}
+
+console.log(`Failed tests: ${checkResults(testResults)}`);
+/*
+
 const prices = [150, 320, 90, 780, 450];
 
 function findBiggest (prices) {
@@ -71,10 +82,6 @@ for (const num of prices)
 
 console.log(findBiggest(prices))
 
-
-
-
-/*
 
 const prices = [120, 250, 80, 150, 400];
 let total = 0;
