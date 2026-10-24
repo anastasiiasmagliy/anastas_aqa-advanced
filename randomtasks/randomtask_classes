@@ -1,10 +1,28 @@
 /*
 
+Завдання 8. Метод updateYear(newYear) 💗
+Тепер навчимося змінювати властивості об'єкта через метод, а не лише отримувати інформацію.
 
-А я хочу, щоб ти додала до цього рядка ще й вік книжки станом на 2026 рік, використовуючи метод getBookAge(), який ти вже написала.
+Додай до класу Book метод updateYear(newYear).
 
-Очікуваний результат:
-Кобзар — Тарас Шевченко (1840), вік книги: 186 років
+Він повинен:
+1. Приймати новий рік видання newYear.
+2. Перевіряти, чи newYear більший за 0 і не перевищує 2026.
+3. Якщо рік правильний — змінювати this.year на newYear і повертати 'Рік оновлено'.
+4. Якщо рік неправильний — не змінювати this.year і повертати 'Некоректний рік'.
+Наприклад:
+console.log(book4.updateYear(2010)); // Рік оновлено
+console.log(book4.year);             // 2010
+
+console.log(book4.updateYear(-5));   // Некоректний рік
+console.log(book4.year);             // 2010
+
+
+Маленька підказка: щоб змінити рік усередині об'єкта, можна написати:
+this.year = newYear;
+
+
+Спробуй самостійно написати тільки updateYear(newYear). Тут ти вже знаєш усе необхідне: параметри, if, return і this. ❤️
 
 */
 
@@ -27,14 +45,83 @@ class Book {
 getBookAge(currentYear) { return currentYear - this.year}
 getInfo() { return `${this.title} — ${this.author} (${this.year})` + (",") + (" ") + ('вік книги:') + (" ") + this.getBookAge(2026)};
 
+isOldBook(currentYear) {
+if (this.getBookAge (currentYear) > 100) {return true}
+else {return false}}
+
+getBookCategory(currentYear) {
+
+const age = this.getBookAge(currentYear);
+
+if (age < 20) {return 'Нова книга'}
+else if  (age >= 20 && age <= 100) {return 'Не нова книга'}
+else {return 'Стара книга'}}
+
+
+getBookStatus(currentYear) {
+return `${this.title}` + (" ") + ("-") + (" ") + this.getBookCategory(currentYear)}
+
+
+updateYear(newYear) {
+if (newYear > 0 && newYear <= 2026) {
+    this.year = newYear; return 'Рік оновлено';
 }
+else {return 'Некоректний рік'}
+
+}
+
+updateTitle(newTitle) {
+if (newTitle === '') {return 'Назва не може бути порожньою'}
+else {this.title = newTitle; return 'Назву оновлено';}
+}
+
+}
+
+/*
+
+Тепер додай сеттер setFormat, який:
+1. Приймає новий формат newFormat.
+2. Дозволяє лише 'pdf', 'epub' або 'mobi'.
+3. Якщо формат правильний — оновлює this.format.
+4. Якщо неправильний — залишає старий формат.
+Очікуваний результат:
+ebook1.setFormat = 'epub';
+console.log(ebook1.getFormat); // epub
+
+ebook1.setFormat = 'txt';
+console.log(ebook1.getFormat); // epub
+
+Підказка: сеттер починається з set, а для перевірки кількох варіантів можна використати ||.
+
+Спробуй написати тільки сеттер самостійно. 💗
+
+*/
+
+class Ebook extends Book {
+    
+    constructor(title, author, year, format) {
+       super  (title, author, year);
+        this.format = format;
+    }
+
+get getFormat () {return this.format;}
+set setFormat (newFormat) {if (newFormat === 'pdf' || newFormat === 'epub' || newFormat === 'mobi') {this.format = newFormat;} else {return this.format}};
+
+getInfo() 
+
+{ return `${super.getInfo()}` + `, формат: ${this.format}`;
+
+}}
 
 const book1 = new Book('Кобзар', 'Тарас Шевченко', 1840);
 const book2 = new Book('Місто', 'Валер’ян Підмогильний', 1928);
 const book3 = new Book('Тигролови', 'Іван Багряний', 1944);
 const book4 = new Book('Книга майбутнього', 'Анна', 2005);
 
+const ebook1 = new Ebook ('Кобзар', 'Тарас Шевченко', 1840, 'pdf');
 
+ebook1.setFormat = 'epub';
+console.log(ebook1.getFormat); // epub
 
-console.log (book1.getBookAge(2020))
-console.log(book1.getInfo());
+ebook1.setFormat = 'txt';
+console.log(ebook1.getFormat); // epub
