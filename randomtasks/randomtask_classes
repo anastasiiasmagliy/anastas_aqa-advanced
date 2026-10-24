@@ -25,7 +25,7 @@ this.year = newYear;
 Спробуй самостійно написати тільки updateYear(newYear). Тут ти вже знаєш усе необхідне: параметри, if, return і this. ❤️
 
 */
-
+/*
 class Book {
     constructor(title, author, year) {
         this.title = title;
@@ -110,7 +110,7 @@ console.log(Book.getLibraryName());
 
 Підказка: тобі знадобляться лише static, назва методу та return.
 
-*/
+*//*
 
 class Ebook extends Book {
     
@@ -140,4 +140,31 @@ const books = [book1, book2, book3, book4];
 
 console.log(Book.findOldestBook(books));
 
-*
+/*
+Є масив:
+const prices = [100, 250, 80, 400, 150];
+
+Завдання: за допомогою for...of виведи в консоль лише ті ціни, які більші за 150.
+
+Очікуваний результат:
+250
+400
+
+Тобі знадобляться лише:
+- for...of — щоб перебрати масив;
+- if — щоб перевірити ціну;
+- console.log() — щоб вивести результат.
+Спробуй написати код сама, а я перевірю.*/
+
+function myPrices() {
+
+for (const price of prices ){
+if (price > 150) {
+console.log (price)}
+}
+
+}
+
+const prices = [100, 250, 80, 400, 150];
+
+myPrices(prices);
