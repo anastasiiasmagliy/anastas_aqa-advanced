@@ -44,6 +44,26 @@ testCase.name
 Як працюємо далі: надсилай розв'язок першого завдання, я перевірю. Потім друге, третє і так до п'ятого.
 */
 
+
+
+const testCases = [
+    { id: 1, name: 'Login', status: 'passed' },
+    { id: 2, name: 'Registration', status: 'failed' },
+    { id: 3, name: 'Deposit', status: 'passed' },
+    { id: 4, name: 'Withdrawal', status: 'failed' },
+    { id: 5, name: 'Logout', status: 'blocked' }
+];
+
+function findCase (testCases) {
+for (const num of testCases)
+    if (num.status === 'failed') {
+        console.log (num.name);
+    } }
+findCase (testCases);
+
+
+/* 
+
 const testResults = [
     'passed',
     'failed',
