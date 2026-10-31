@@ -8,13 +8,11 @@ year: рядок, представляє ім'я власника автомоб
 */
 
 const book = {
-
-title: "1984", 
-author: "Orwell",
-year: 2015,
-
+  title: "1984",
+  author: "Orwell",
+  year: 2015,
 };
 
-const {title, author, year} = book;
+const { title, author, year } = book;
 
-console.log (title, author);
+console.log(title, author);

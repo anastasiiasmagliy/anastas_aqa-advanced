@@ -4,6 +4,6 @@
 
 let length = 56;
 let width = 10;
-let result = length*width;
+let result = length * width;
 
-console.log (result);
+console.log(result);

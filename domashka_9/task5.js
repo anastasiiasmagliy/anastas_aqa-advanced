@@ -5,12 +5,9 @@
 
 /*/
 
-const users = [
-    {name: "Oleh",
-        email: "random@gmail.com",
-        age: 13
-    }];
+const users = [{ name: "Oleh", email: "random@gmail.com", age: 13 }];
 
-for (element of users ) {
-    const { name, email, age } = element; 
-console.log (name, email, age);}
+for (element of users) {
+  const { name, email, age } = element;
+  console.log(name, email, age);
+}

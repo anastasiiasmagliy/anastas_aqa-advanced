@@ -5,7 +5,7 @@
 
 let radius = 15;
 let height = 88;
-let formula = Math.PI * (radius**2) * height;
+let formula = Math.PI * radius ** 2 * height;
 
-console.log (formula);
-console.log (formula.toFixed(2));
+console.log(formula);
+console.log(formula.toFixed(2));

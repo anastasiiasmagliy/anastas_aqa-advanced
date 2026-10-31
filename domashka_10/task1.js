@@ -16,43 +16,43 @@
 
 */
 
-import Book from './Book.js';
-import EBook from './EBook.js';
+import Book from "./Book.js";
+import EBook from "./EBook.js";
 
-const book1 = new Book('Кобзар', 'Тарас Шевченко', 1840);
-const book2 = new Book('Місто', 'Валер’ян Підмогильний', 1928);
+const book1 = new Book("Кобзар", "Тарас Шевченко", 1840);
+const book2 = new Book("Місто", "Валер’ян Підмогильний", 1928);
 
-const ebook1 = new EBook('1984', 'Джордж Орвелл', 1949, 'epub');
+const ebook1 = new EBook("1984", "Джордж Орвелл", 1949, "epub");
 
-console.log('--- Звичайна книга ---');
+console.log("--- Звичайна книга ---");
 book1.printInfo();
 
-console.log('--- Ще одна книга ---');
+console.log("--- Ще одна книга ---");
 book2.printInfo();
 
-console.log('--- Електронна книга ---');
+console.log("--- Електронна книга ---");
 ebook1.printInfo();
 
-book1.title = 'Кобзар — нове видання';
-console.log('Нова назва:', book1.title);
+book1.title = "Кобзар — нове видання";
+console.log("Нова назва:", book1.title);
 
-book1.author = 'Тарас Шевченко';
-console.log('Автор:', book1.author);
+book1.author = "Тарас Шевченко";
+console.log("Автор:", book1.author);
 
 book1.year = 1841;
-console.log('Новий рік:', book1.year);
+console.log("Новий рік:", book1.year);
 
-ebook1.format = 'pdf';
-console.log('Новий формат:', ebook1.format);
+ebook1.format = "pdf";
+console.log("Новий формат:", ebook1.format);
 
-const ebook2 = EBook.fromBook(book2, 'mobi');
+const ebook2 = EBook.fromBook(book2, "mobi");
 
-console.log('--- Електронна книга зі звичайної ---');
+console.log("--- Електронна книга зі звичайної ---");
 ebook2.printInfo();
 
 const allBooks = [book1, book2, ebook1, ebook2];
 
 const oldestBook = Book.findOldestBook(allBooks);
 
-console.log('--- Найдавніша книга ---');
+console.log("--- Найдавніша книга ---");
 oldestBook.printInfo();

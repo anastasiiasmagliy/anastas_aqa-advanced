@@ -3,15 +3,13 @@
 // Якщо age відповідає умові, поверніть true, інакше поверніть false.
 // Викличте вашу функцію з аргументами 25 і 15, і виведіть результат (чи є особа дорослою) в консоль для кожного випадку.
 
+function checkAdult(age) {
+  if (age >= 18) {
+    return true;
+  }
 
-function checkAdult (age) {
-
-    if (age >=18) {
-        return true;
-    }
-
-    return false;
+  return false;
 }
 
-console.log (checkAdult (25, 15));
-console.log (checkAdult (15));
+console.log(checkAdult(25, 15));
+console.log(checkAdult(15));

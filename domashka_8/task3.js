@@ -10,11 +10,9 @@
 
 const myMess = [10, 20, 30, 40, 50];
 
-function sumMess1 (a, b) {
-
-    return a + b;
+function sumMess1(a, b) {
+  return a + b;
 }
 
-const sumMess = myMess.reduce (sumMess1);
+const sumMess = myMess.reduce(sumMess1);
 console.log(sumMess);
-

@@ -22,20 +22,20 @@ handleNum (3, ifTest, ifTest)
 
 */
 
-function handleNum (randomNumber, handleEven, handleOdd) {
-    if (randomNumber % 2 === 0) {
-        handleEven();
-    } else {
-        handleOdd();
-    }
+function handleNum(randomNumber, handleEven, handleOdd) {
+  if (randomNumber % 2 === 0) {
+    handleEven();
+  } else {
+    handleOdd();
+  }
 }
 
-function handleEven() { 
-    console.log("number is even");
+function handleEven() {
+  console.log("number is even");
 }
 
 function handleOdd() {
-    console.log("number is odd");
+  console.log("number is odd");
 }
 
 handleNum(10, handleEven, handleOdd);

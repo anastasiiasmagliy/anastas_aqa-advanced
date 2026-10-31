@@ -10,27 +10,22 @@
 let itemsAvailable = 6;
 let itemsOrdered = 12;
 
-   
-
-function checkOrder (itemsAvailable, itemsOrdered) {
-
-     if (itemsAvailable < 0 || itemsOrdered < 0 ) {
+function checkOrder(itemsAvailable, itemsOrdered) {
+  if (itemsAvailable < 0 || itemsOrdered < 0) {
     return "impossible";
-    }
+  }
 
-    if (itemsOrdered === 0) {
-        return "Your order is empty";
-    }
+  if (itemsOrdered === 0) {
+    return "Your order is empty";
+  }
 
-    if (itemsAvailable < itemsOrdered) {
-        return "Your order is too large, we dont have enough goods";
-    }
+  if (itemsAvailable < itemsOrdered) {
+    return "Your order is too large, we dont have enough goods";
+  }
 
-    if (itemsAvailable >= itemsOrdered) {
-
-        return "Your order is accepted";
-    }
-         
+  if (itemsAvailable >= itemsOrdered) {
+    return "Your order is accepted";
+  }
 }
 
-console.log (checkOrder (itemsAvailable, itemsOrdered));
+console.log(checkOrder(itemsAvailable, itemsOrdered));

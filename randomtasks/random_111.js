@@ -45,24 +45,24 @@ testCase.name
 */
 
 const testResults = [
-    'passed',
-    'failed',
-    'passed',
-    'blocked',
-    'failed',
-    'passed'
+  "passed",
+  "failed",
+  "passed",
+  "blocked",
+  "failed",
+  "passed",
 ];
 
 function checkResults(testResults) {
-    let amountFailed = 0;
+  let amountFailed = 0;
 
-    for (const num of testResults) {
-        if (num === 'failed') {
-            amountFailed++;
-        }
+  for (const num of testResults) {
+    if (num === "failed") {
+      amountFailed++;
     }
+  }
 
-    return amountFailed;
+  return amountFailed;
 }
 
 console.log(`Failed tests: ${checkResults(testResults)}`);

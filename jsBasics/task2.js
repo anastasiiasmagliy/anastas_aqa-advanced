@@ -3,12 +3,11 @@
 // Потім використайте шаблонний рядок для створення того ж вітання.
 // Виведіть результат в консоль.
 
-
 const name1 = "Анастасія";
 const name2 = "Ірина";
 
 let msg2 = "Привіт, " + name1 + "! " + "Привіт, " + name2 + "!";
 let msg1 = `Привіт, ${name1} і ${name2}!`;
 
-console.log (msg2);
-console.log (msg1);
+console.log(msg2);
+console.log(msg1);

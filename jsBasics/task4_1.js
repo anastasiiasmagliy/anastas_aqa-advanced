@@ -3,5 +3,5 @@
 // Обчисліть площу кола за формулою π * radius^2 і виведіть результат.
 
 let radius = 10;
-let result = Math.PI*radius**2;
-console.log (result);
+let result = Math.PI * radius ** 2;
+console.log(result);

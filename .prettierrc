@@ -1,0 +1,23 @@
+{
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 4,
+  "useTabs": false,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "printWidth": 100,
+  "endOfLine": "lf"
+}
+
+/*
+semi: true	Додає ; наприкінці інструкцій
+singleQuote: true	Використовує 'текст' замість "текст"
+tabWidth: 4	Відступи по 4 пробіли
+useTabs: false	Пробіли замість символів табуляції
+trailingComma: "all"	Додає кінцеві коми там, де це дозволено
+bracketSpacing: true	Форматує { name: 'Anna' }
+arrowParens: "always"	Пише (num) => num * 2
+printWidth: 100	Намагається переносити довгі рядки
+endOfLine: "lf"	Єдиний стиль перенесення рядків
+*/ 

@@ -10,12 +10,11 @@
 
 const numbers = [1, 2, 3, 4, 5];
 
-function checkDouble (num, index) {
-
-    return num * index;
+function checkDouble(num, index) {
+  return num * index;
 }
 
 const double = numbers.map(checkDouble);
 
-console.log(...numbers); 
+console.log(...numbers);
 console.log(...double);
