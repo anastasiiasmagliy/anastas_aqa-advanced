@@ -5,18 +5,18 @@
 // Викличте вашу функцію з аргументом, наприклад, 5, щоб почати рекурсивний лічильник.
 
 function createFunc(num) {
-  if (num <= 0) {
-    console.log("no way");
-    return;
-  }
+    if (num <= 0) {
+        console.log('no way');
+        return;
+    }
 
-  console.log(num);
+    console.log(num);
 
-  if (num > 1) {
-    createFunc(num - 1);
-  } else {
-    console.log(0);
-  }
+    if (num > 1) {
+        createFunc(num - 1);
+    } else {
+        console.log(0);
+    }
 }
 
 createFunc(10);

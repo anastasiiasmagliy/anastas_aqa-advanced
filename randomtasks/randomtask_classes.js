@@ -1,0 +1,170 @@
+/*
+
+Завдання 8. Метод updateYear(newYear) 💗
+Тепер навчимося змінювати властивості об'єкта через метод, а не лише отримувати інформацію.
+
+Додай до класу Book метод updateYear(newYear).
+
+Він повинен:
+1. Приймати новий рік видання newYear.
+2. Перевіряти, чи newYear більший за 0 і не перевищує 2026.
+3. Якщо рік правильний — змінювати this.year на newYear і повертати 'Рік оновлено'.
+4. Якщо рік неправильний — не змінювати this.year і повертати 'Некоректний рік'.
+Наприклад:
+console.log(book4.updateYear(2010)); // Рік оновлено
+console.log(book4.year);             // 2010
+
+console.log(book4.updateYear(-5));   // Некоректний рік
+console.log(book4.year);             // 2010
+
+
+Маленька підказка: щоб змінити рік усередині об'єкта, можна написати:
+this.year = newYear;
+
+
+Спробуй самостійно написати тільки updateYear(newYear). Тут ти вже знаєш усе необхідне: параметри, if, return і this. ❤️
+
+*/
+/*
+class Book {
+    constructor(title, author, year) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
+
+ isClassic() {
+    if (this.year < 1950) {
+        return true;
+    } else {
+        return false;
+    }
+    
+}
+
+static getLibraryName() {return 'Моя бібліотека'};
+
+static findOldestBook(books) {
+    let oldest = books[0];
+
+    for (const book of books) {
+        if (book.year < oldest.year) {
+            oldest = book;
+        }
+    }
+
+    return oldest;
+}
+
+getBookAge(currentYear) { return currentYear - this.year}
+getInfo() { return `${this.title} — ${this.author} (${this.year})` + (",") + (" ") + ('вік книги:') + (" ") + this.getBookAge(2026)};
+
+isOldBook(currentYear) {
+if (this.getBookAge (currentYear) > 100) {return true}
+else {return false}}
+
+getBookCategory(currentYear) {
+
+const age = this.getBookAge(currentYear);
+
+if (age < 20) {return 'Нова книга'}
+else if  (age >= 20 && age <= 100) {return 'Не нова книга'}
+else {return 'Стара книга'}}
+
+
+getBookStatus(currentYear) {
+return `${this.title}` + (" ") + ("-") + (" ") + this.getBookCategory(currentYear)}
+
+
+updateYear(newYear) {
+if (newYear > 0 && newYear <= 2026) {
+    this.year = newYear; return 'Рік оновлено';
+}
+else {return 'Некоректний рік'}
+
+}
+
+updateTitle(newTitle) {
+if (newTitle === '') {return 'Назва не може бути порожньою'}
+else {this.title = newTitle; return 'Назву оновлено';}
+}
+
+}
+
+/*
+
+3. Твоє перше завдання зі static
+Почнемо з простішого, щоб зрозуміти синтаксис.
+
+Додай до свого класу Book статичний метод getLibraryName().
+
+Він повинен повертати рядок:
+
+'Моя бібліотека'
+
+Після цього виклич його так:
+console.log(Book.getLibraryName());
+
+Очікуваний результат:
+Моя бібліотека
+
+Підказка: тобі знадобляться лише static, назва методу та return.
+
+*//*
+
+class Ebook extends Book {
+    
+    constructor(title, author, year, format) {
+       super  (title, author, year);
+        this.format = format;
+    }
+
+get getFormat () {return this.format;}
+set setFormat (newFormat) {if (newFormat === 'pdf' || newFormat === 'epub' || newFormat === 'mobi') {this.format = newFormat;} else {return this.format}};
+
+getInfo() 
+
+{ return `${super.getInfo()}` + `, формат: ${this.format}`;
+
+}}
+
+const book1 = new Book('Кобзар', 'Тарас Шевченко', 1840);
+const book2 = new Book('Місто', 'Валер’ян Підмогильний', 1928);
+const book3 = new Book('Тигролови', 'Іван Багряний', 1944);
+const book4 = new Book('Книга майбутнього', 'Анна', 2005);
+
+const ebook1 = new Ebook ('Кобзар', 'Тарас Шевченко', 1840, 'pdf');
+
+
+const books = [book1, book2, book3, book4];
+
+console.log(Book.findOldestBook(books));
+
+/*
+Є масив:
+const prices = [100, 250, 80, 400, 150];
+
+Завдання: за допомогою for...of виведи в консоль лише ті ціни, які більші за 150.
+
+Очікуваний результат:
+250
+400
+
+Тобі знадобляться лише:
+- for...of — щоб перебрати масив;
+- if — щоб перевірити ціну;
+- console.log() — щоб вивести результат.
+Спробуй написати код сама, а я перевірю.*/
+
+function myPrices() {
+
+for (const price of prices ){
+if (price > 150) {
+console.log (price)}
+}
+
+}
+
+const prices = [100, 250, 80, 400, 150];
+
+myPrices(prices);
