@@ -9,5 +9,8 @@
   },
   "scripts": {
     "prepare": "husky"
+  },
+  "dependencies": {
+    "jest": "^30.5.2"
   }
 }
