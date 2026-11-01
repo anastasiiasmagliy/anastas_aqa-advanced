@@ -37,7 +37,7 @@ function isCompleted(order) {
     if (order.status === 'completed') {
         return true;
     } else {
-        return false;
+        return false
     }
 }
 
