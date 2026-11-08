@@ -1,24 +1,84 @@
-/* Тепер перевіримо, наскільки впевнено ти працюєш із масивом об'єктів.
+/* Клас TestCase
+Уявімо, що ти створюєш систему для зберігання результатів QA-тестів.
 
-Уявімо, що в тебе є результати автоматизованих QA-тестів:
+Створи клас TestCase, який приймає в конструкторі три параметри:
+- id — номер тесту.
+- name — назва тесту.
+- status — статус (passed, failed, blocked).
+Клас повинен мати два методи:
+
+isFailed() — повертає true, якщо статус тесту failed, інакше false.
+
+getInfo() — повертає рядок у форматі:
+Test #2: Registration — failed
 
 
-Напиши функцію getFailedTests(testCases), яка повертає масив назв усіх тестів зі статусом failed.
 
-Очікуваний результат:
-console.log(getFailedTests(testCases));
-// ['Registration', 'Withdrawal']
+Приклад використання
+Тобі потрібно написати клас так, щоб цей код працював:
+const test1 = new TestCase(1, "Login", "passed");
+const test2 = new TestCase(2, "Registration", "failed");
+
+console.log(test1.isFailed()); // false
+console.log(test2.isFailed()); // true
+
+console.log(test1.getInfo());
+// Test #1: Login — passed
+
+console.log(test2.getInfo());
+// Test #2: Registration — failed
 
 
-Умови: використай for...of, не використовуй filter() і map(),
-повертай масив через return, а 
-якщо тестів зі статусом failed немає — повертай порожній масив [].
+Невеликі підказки
+Каркас класу:
+class TestCase {
+    constructor(id, name, status) {
+        // Збережи три властивості
+    }
 
-Підказка: пригадай метод push(). І зверни увагу, що потрібно повертати не весь об'єкт, а лише його властивість name.
+    isFailed() {
+        // Перевір статус
+    }
 
-Це завдання особливо цікаве, бо раніше ми вже працювали з подібним масивом,
-але тоді ти виводила назви тестів через console.log(). Тепер перевіримо, чи зможеш зібрати їх у новий масив і повернути з функції.*/
+    getInfo() {
+        // Поверни рядок
+    }
+}
 
+
+Пригадай, що this.status звертається до властивості конкретного екземпляра класу, а для формування рядка зручно використовувати шаблонні літерали з ${...}.
+
+Умови: використовуй return в обох методах, не виводь результат через console.log() усередині класу та не використовуй готових сторонніх функцій.
+
+Спробуй написати весь клас самостійно. Якщо щось не виходитиме, надсилай навіть незавершений код — будемо розбирати саме той момент, де ти застрягла.*/
+
+class TestCase {
+    constructor (id, name, status) {
+    this.id = id;
+    this.name = name;
+    this.status = status;
+}
+    
+
+getInfo() {
+    return `Test #${this.id}: ${this.name} — ${this.status}`};
+
+isFailed() {
+    if (this.status === "failed") {
+        return true;}
+return false;}
+
+    }
+
+const test1 = new TestCase(1, "Login", "passed");
+const test2 = new TestCase(2, "Registration", "failed");
+
+console.log(test1.isFailed()); // false
+console.log(test2.isFailed()); // true
+
+console.log(test1.getInfo()); // false
+console.log(test2.getInfo()); // true
+/* 
 const testCases = [
   { id: 1, name: "Login", status: "passed" },
   { id: 2, name: "Registration", status: "failed" },
@@ -41,7 +101,7 @@ function getFailedTests(testCases) {
 }
 console.log(getFailedTests(testCases));
 
-/* 
+
 function findLargestEven(numbers) {
   let result = null;
   for (const num of numbers) {
